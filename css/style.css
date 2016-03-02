@@ -14,6 +14,7 @@ body {
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #F2F0F2
 }
 
 .text-vertical-center {
@@ -166,16 +167,13 @@ hr.small {
 
 .about {
     padding: 50px 0;
+    background-color: white;
 }
 
 /* Services */
-
-.services {
+.speakers {
     padding: 50px 0;
-}
-
-.service-item {
-    margin-bottom: 30px;
+    background-color: rgba(183, 182, 183, 0.41);
 }
 
 /* Callout */
@@ -191,7 +189,6 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;
 }
-
 /* Portfolio */
 
 .portfolio {
@@ -224,6 +221,12 @@ hr.small {
 
 .map {
     height: 580px;
+    object-fit: cover;
+}
+
+.gmap {
+    height: 100%;
+    width: 100%;
 }
 
 .map-container {
@@ -234,7 +237,7 @@ hr.small {
 .location-container {
     padding-left: 0px;
     height: auto;
-    background: rgba(0, 0, 1, 0.81);
+    background: rgba(233, 229, 220, 0.63);
 }
 
 .venue-info-container {
@@ -243,17 +246,38 @@ hr.small {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
-    height: 580px;
+    height: 40%;
 }
 
 .location-info {
     text-align: left;
     text-indent: 30px;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 600;
     height: 500px;
-    color: rgb(199, 210, 212)
+    color: rgba(16, 16, 16, 0.87);
+    padding-left: 30px;
 }
 
+/* featured speakers */
+.speaker-profile {
+    object-fit: cover;
+}
+
+.speaker-picture {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.speakers-banner-container {
+    text-align: center;
+    object-fit: cover;
+    height: 30%;
+    width: 100%;
+}
 
 @media(max-width:768px) {
     .map {
