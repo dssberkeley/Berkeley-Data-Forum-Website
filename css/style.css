@@ -129,7 +129,7 @@ hr.small {
 }
 
 #menu-toggle {
-    z-index: 1;
+    z-index: 100;
     position: fixed;
     top: 0;
     right: 0;
@@ -156,11 +156,27 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    /*background: url(../img/ucberkeley.jpg) no-repeat center center scroll;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#bg-img {
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    -webkit-filter: contrast(90%);
+    z-index: 1
+}
+
+.forum-title {
+    z-index: 10;
+    position: relative;;
+    margin:0 auto;
 }
 
 /* About */
@@ -219,9 +235,18 @@ hr.small {
 
 /* Map */
 
+.venue-info-container {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 550px;
+    position: relative;
+}
+
 .map {
-    height: 580px;
-    object-fit: cover;
+    height: 100%;
 }
 
 .gmap {
@@ -230,33 +255,35 @@ hr.small {
 }
 
 .map-container {
-    padding-right: 0px;
-    height: 580px;
+    padding: 0px;
+    height: 100%;
+}
+
+.map-container iframe {
+    pointer-events: none;
 }
 
 .location-container {
     padding-left: 0px;
-    height: auto;
-    background: rgba(233, 229, 220, 0.63);
-}
-
-.venue-info-container {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    height: 40%;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    right: 20px;
+    top: 20px;
 }
 
 .location-info {
     text-align: left;
     text-indent: 30px;
-    font-size: 40px;
-    font-weight: 600;
-    height: 500px;
-    color: rgba(16, 16, 16, 0.87);
-    padding-left: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    padding-left: 20px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* featured speakers */
@@ -265,8 +292,8 @@ hr.small {
 }
 
 .speaker-picture {
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 175px;
     display: block;
     margin: 0 auto;
     border-radius: 50%;
@@ -279,14 +306,155 @@ hr.small {
     width: 100%;
 }
 
+/* ticket */
+.modal-body {
+    padding: 0px;
+}
+
+#ticket-btn {
+    position: relative;
+    background-color: rgba(45, 136, 214, 0.89);
+    transition: 50ms;
+    margin-left: 10px;
+}
+
+#ticket-btn:hover {
+    background-color: rgba(45, 136, 214, 1);
+}
+
+#ticket-btn-second {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 50px;
+    background-color: rgba(45, 136, 214, 0.95);
+    transition: 50ms;
+    width: 500px;
+    height: 60px;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.ticket-btn-container {
+    /*position: absolute;*/
+    height: 20%;
+    width: 100%;
+    text-align: center;
+}
+
 @media(max-width:768px) {
     .map {
         height: 75%;
     }
 }
 
-/* Footer */
+/* sponsors */
+#sponsors {
+    height: 30%;
+}
+
+/*Import Footers*/
+@import url(footers/footer-v1.css);
+
 
 footer {
     padding: 100px 0;
+}
+
+
+.footer-v1 .footer {
+    padding: 40px 0;
+    background: #272727;
+}
+
+.footer-v1 .footer p {
+    color: #eee;
+}
+
+.footer-v1 .footer h2 {
+    color: #eee;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+/*Link List*/
+.footer-v1 .link-list li {
+    border-top: solid 1px #353535;
+}
+
+/*Copyright*/
+.footer-v1 .copyright {
+    background: #222;
+    border-top: none;
+    padding: 10px 0 5px;
+}
+
+.footer-v1 .copyright p {
+    color: #eee;
+    margin-top: 14px;
+}
+
+.footer-v1 .copyright a {
+    margin: 0 2px;
+}
+
+.footer-v1 .footer-socials {
+    margin-top: 12px;
+    text-align: right;
+}
+
+.footer-v1 .footer-socials li a {
+    color: #777;
+    font-size: 16px;
+}
+
+/*@media (max-width: 991px) {
+    .footer-v1 .copyright,
+    .footer-v1 .footer-socials {
+        text-align: left;
+    }
+}*/
+
+.latest-list li {
+    padding: 8px 0;
+    border-top: 1px solid #353535;
+}
+
+.latest-list li {
+    padding: 8px 0;
+    border-top: 1px solid #353535;
+}
+
+.latest-list li:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.latest-list li a {
+    color: #eee;
+}
+
+.latest-list small {
+    color: #999;
+    display: block;
+}
+
+
+
+/* Dotted Headlines*/
+
+.headline {
+  display: block;
+  margin: 10px 0 25px 0;
+  border-bottom: 1px dotted #e4e9f0;
+}
+
+.headline h2,
+.headline h3,
+.headline h4 {
+  margin: 0 0 -2px 0;
+  padding-bottom: 5px;
+  display: inline-block;
+  border-bottom: 2px solid #72c02c;
 }

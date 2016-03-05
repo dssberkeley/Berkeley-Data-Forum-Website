@@ -12,10 +12,16 @@
     <title>Berkeley Data Science Forum</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
 
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="css/theme-colors/dark-blue.css">
+    <!-- <link rel="stylesheet" href="css/theme-skins/dark.css" id="style_color"> -->
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -53,6 +59,9 @@
                 <a href="#venue">Venue</a>
             </li>
             <li>
+                <a href="#venue">Purchase Ticket</a>
+            </li>
+            <li>
                 <a href="#sponsors">Sponsors</a>
             </li>
 
@@ -61,11 +70,15 @@
 
     <!-- Header -->
     <header id="top" class="header">
-        <div class="text-vertical-center">
+        <img id="bg-img" src="img/ucberkeley.jpg" alt="">
+        <div class="forum-title text-vertical-center">
             <h1>Berkeley Data Science Forum</h1>
-            <h3>Description about Berkeley Data Science Forum goes here</h3>
+            <h3>April 23rd Wheeler Auditorium, UC Berkeley</h3>
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <div>
+                <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+                <div id="ticket-btn" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#purchase-ticket-modal">Purchase Ticket</div>
+            </div>
         </div>
     </header>
 
@@ -74,11 +87,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
+
                     <h2>About Us</h2>
+                    <br>
                     <p class="lead">
-                        <a href="http://dssberkeley.org/about.html">Data Science Society at Berkeley (DSSB)</a>, supported by the Berkeley Institute of Data Science , aims to create a cross-campus Data Science learning platform for interested students and provide them with the best possible resources for success. This year, besides hosting various projects and research, we are preparing to host an annual Data Science Forum with expected audience size of 800 at UC Berkeley on <b>Saturday April 23rd, 2016</b>. We will be inviting 12 data science leaders from the most innovative companies at Bay Area.
+                        <a href="http://dssberkeley.org/about.html">Data Science Society at Berkeley (DSSB)</a>, supported by the Berkeley Institute of Data Science , aims to create a cross-campus Data Science learning platform for interested students and provide them with the best possible resources for success. This year, besides hosting various projects and research, we will host an annual Data Science Forum with expected audience size of 800 at UC Berkeley on <b>Saturday April 23rd, 2016</b>, with  12 data science leaders from the most innovative companies at Bay Area.
                     </p>
-                    <div class="row">
+<!--                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
@@ -114,7 +129,7 @@
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -129,27 +144,23 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-12 ">
+                    <!-- <div class= "headline">  </div> -->
+                    <!-- <hr class="small"> -->
                     <h2>Featured Speakers</h2>
-                    <hr class="small">
+                    <br>
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+
+                    	<div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
-                                <img class="speaker-picture" src="img/travis_brooks.jpg">
+                                <img src="img/jure_leskovec.jpg" alt="" class="speaker-picture">
+                            </span>
                                 <h4>
-                                    <strong>Travis Brooks</strong>
+                                    <strong>Jure Leskovec</strong>
                                 </h4>
-                                <p>Head of Data Science at Yelp</p>
+                                <p>Chief Scientist at Pinterest</p>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="speaker-profile">
-                                <img class="speaker-picture" src="img/paul_ellwood.jpg">
-                                <h4>
-                                    <strong>Paul Ellwood</strong>
-                                </h4>
-                                <p>VP of Data Engineering and Analytics at Netflix</p>
-                            </div>
-                        </div>
+
                         <div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
                                 <img class="speaker-picture" src="img/adam_coates.jpg">
@@ -159,6 +170,17 @@
                                 <p>Director of Silicon Valley AI Lab at Baidu</p>
                             </div>
                         </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="speaker-profile">
+                                <img class="speaker-picture" src="img/travis_brooks.jpg">
+                                <h4>
+                                    <strong>Travis Brooks</strong>
+                                </h4>
+                                <p>Head of Data Science at Yelp</p>
+                            </div>
+                        </div>
+
                         <div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
                                 <img class="speaker-picture" src="img/anthony_goldbloom.jpg">
@@ -180,15 +202,7 @@
                                 <p>Sr Director and Head of Data Science @Walmartlabs</p>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="speaker-profile">
-                                <img src="img/vijay_k_narayanan.jpg" alt="" class="speaker-picture">
-                                <h4>
-                                    <strong>Vijay k Narayanan</strong>
-                                </h4>
-                                <p>Head of Data Science, Director, Algorithms and Data Science at Microsoft</p>
-                            </div>
-                        </div>
+
                         <div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
                                 <img src="img/jeremy_stanley.jpg" alt="" class="speaker-picture">
@@ -198,6 +212,17 @@
                                 <p>VP Data Science at Instacart</p>
                             </div>
                         </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="speaker-profile">
+                                <img class="speaker-picture" src="img/paul_ellwood.jpg">
+                                <h4>
+                                    <strong>Paul Ellwood</strong>
+                                </h4>
+                                <p>VP of Data Engineering and Analytics at Netflix</p>
+                            </div>
+                        </div>
+
                         <div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
                                 <img src="img/aditi_dhagat.jpg" alt="" class="speaker-picture">
@@ -209,6 +234,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
@@ -228,16 +254,17 @@
                                 <p>Director of Analytics at Coursera</p>
                             </div>
                         </div>
+
                         <div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
-                                <img src="img/jure_leskovec.jpg" alt="" class="speaker-picture">
-                            </span>
+                                <img src="img/vijay_k_narayanan.jpg" alt="" class="speaker-picture">
                                 <h4>
-                                    <strong>Jure Leskovec</strong>
+                                    <strong>Vijay k Narayanan</strong>
                                 </h4>
-                                <p>Chief Scientist at Pinterest</p>
+                                <p>Head of Data Science, Director, Algorithms and Data Science at Microsoft</p>
                             </div>
                         </div>
+
                         <div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
                                 <img src="img/unknown_speaker.png" alt="" class="speaker-picture">
@@ -260,50 +287,63 @@
 
     <!-- Map -->
     <div id="venue" class="container venue-info-container">
-        <div class="row">
-            <div class="col-lg-6 col-sm-12 map-container">
-                <div class="map">
-                    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Wheeler,+Hall,+Berkeley,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-                    <br />
-                    <small>
-                        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Wheeler,+Hall,+Berkeley,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-                    </small>
-                    </iframe>
-                </div>
+        <div class="col-lg-12 col-sm-12 map-container">
+            <div class="map">
+                <iframe id="google-map" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Wheeler,+Hall,+Berkeley,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+                <br />
+                <small>
+                    <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Wheeler,+Hall,+Berkeley,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+                </small>
+                </iframe>
             </div>
-            <div class="col-lg-6 col-sm-12 location-container">
-                <br>
-                <br>
-                <br>
-                <br>
-                <div class="location-info">
-                    <p>155 Wheeler Hall</p>
-                    <p>Berkeley, CA</p>
-                    <p>94704</p>
-                </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-12 location-container">
+            <div class="location-info">
+                <p>155 Wheeler Hall</p>
+                <p>Berkeley, CA</p>
+                <p>94704</p>
             </div>
         </div>
     </div>
 
-    <!-- Callout to action -->
-    <aside class="callout call-to-action">
-        <div class="text-vertical-center ticket-btn">
-            <div class="btn btn-lg btn-dark">Buy Ticket</div>
-        </div>
-    </aside>
+    <div id="purchase-ticket-modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Purchase Ticket</h4>
+          </div>
+          <div class="modal-body">
+                <div style="width:100%; height:100%; text-align:left;" >
+                    <iframe  src="https://eventbrite.com/tickets-external?eid=22612327079&ref=etckt" frameborder="0" height="352" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+                    <div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" >
+                        <a class="powered-by-eb" style="color: #dddddd; text-decoration: none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Powered by Eventbrite</a>
+                    </div>
+              </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="ticket-btn-container">
+        <div id="ticket-btn-second" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#purchase-ticket-modal">Purchase Ticket</div>
+    </div>
 
     <!-- sponsors -->
     <section id="sponsors" class="sponsors">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>sponsors</h2>
+                    <h2>Our Sponsors</h2>
                     <hr class="small">
                     <div class="row">
                         <!--  TODO: sponsors info goes here -->
+                        <p>
+                            <h4>Please <a href="mailto:dss.berkeley@gmail.com">contact us</a> if you are willing to sponsor!</h4>
+                        </p>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -312,37 +352,83 @@
         <!-- /.container -->
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Data Science Society at Berkeley</strong>
-                    </h4>
-                    <p>Berkeley, CA 94704</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (510) 612-3079</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:dss.berkeley@gmail.com">dss.berkeley@gmail.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://www.facebook.com/dssberkeley/"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+
+
+
+    <!-- footer -->
+    <div class="footer-v1">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- About -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <a href="index.html"><h2> About DSSB </h2></a>
+                        <p>Our mission is to gather students from Berkeley who are interested in data science, and give them the best possible resources to  strive for success.</p>
+
+                    </div><!--/col-md-3-->
+                    <!-- End About -->
+
+                    <!-- Latest -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="posts">
+                            <div class="headline"><h2>Follow Us</h2></div>
+                            <ul class="list-unstyled latest-list">
+                                <li>
+                                    <a href="https://www.facebook.com/dssberkeley/?fref=ts">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="#">Instagram</a>
+                                </li>
+                                <li>
+                                    <a href="#">Wechat</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div><!--/col-md-3-->
+                    <!-- End Latest -->
+
+                    <!-- Link List -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="headline"><h2>Contact Us</h2></div>
+                        <p>
+                        Please feel free to email us at dss.berkeley@gmail.com.  We will get back to you as soon as possible!
+                        </p>
+                    </div><!--/col-md-3-->
+                    <!-- End Link List -->
+
+                    <!-- Address -->
+                    <div class="col-md-3 map-img md-margin-bottom-40">
+                        <div class="headline"><h2>Join our mailing list</h2></div>
+                        <img src="img/mailinglist.jpg" height="128" width="128">
+                    </div><!--/col-md-3-->
+                    <!-- End Address -->
                 </div>
             </div>
-        </div>
-    </footer>
+        </div><!--/footer-->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <p>
+                            2016 &copy; All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p class="text-center">
+                            We are a student group acting independently of the University of California. We take full responsibility for our organization and this website.
+                        </p>
+                    </div>
+                    <div class="col-md-1 map-img">
+                        <a href="https://www.ocf.berkeley.edu/">
+                        <img src="https://www.ocf.berkeley.edu/images/hosted-logos/ocfbadge_mini8.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/copyright-->
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -355,34 +441,43 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
         });
-    });
+
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+
+        // disable pointer events when mouse leave, enable when click
+        $('.map-container').click(function () {
+            $('.map-container iframe').css("pointer-events", "auto");
+        });
+
+        $( ".map-container" ).mouseleave(function() {
+          $('.map-container iframe').css("pointer-events", "none");
+        });
+
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
     </script>
 
 </body>
