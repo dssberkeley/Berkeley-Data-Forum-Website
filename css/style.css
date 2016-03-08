@@ -169,6 +169,7 @@ hr.small {
     position: absolute;
     width: 100%;
     z-index: 1;
+    min-height: 100%;
 }
 
 .forum-title {
@@ -287,7 +288,7 @@ hr.small {
     height: 50px;
     background-color: rgba(45, 136, 214, 0.95);
     transition: 50ms;
-    width: 500px;
+    width: 45%;
     height: 60px;
     font-size: 20px;
     padding-top: 15px;
