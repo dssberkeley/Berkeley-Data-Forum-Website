@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Berkeley Data Science Forum official website">
+    <meta name="author" content="Junyu Wang">
 
     <title>Berkeley Data Science Forum</title>
 
@@ -18,6 +18,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <!-- CSS Theme -->
     <link rel="stylesheet" href="css/theme-colors/dark-blue.css">
@@ -71,10 +72,10 @@
     <header id="top" class="header">
         <img id="bg-img" src="img/ucberkeley_campus.jpg" alt="">
         <div class="forum-title text-vertical-center">
-            <h1>Berkeley Data Science Forum</h1>
-            <h3>April 23rd, Wheeler Auditorium, UC Berkeley</h3>
+            <h1 class="wow fadeInDown" data-wow-duration="500ms">Berkeley Data Science Forum</h1>
+            <h3 class="wow fadeInDown" data-wow-duration="1500ms">April 23rd, Wheeler Auditorium, UC Berkeley</h3>
             <br>
-            <div>
+            <div class="section--purple wow fadeInDown" data-wow-delay="500ms">
                 <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
                 <div id="ticket-btn" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#purchase-ticket-modal">Purchase Ticket</div>
             </div>
@@ -93,43 +94,6 @@
                     <p class="lead">
                         <a href="http://dssberkeley.org/about.html">Data Science Society at Berkeley (DSSB)</a>, supported by the Berkeley Institute of Data Science , aims to create a cross-campus Data Science learning platform for interested students and provide them with the best possible resources for success. This year, besides hosting various projects and research, we will host an annual Data Science Forum with expected audience size of 800 at UC Berkeley on <b>Saturday April 23rd, 2016</b>, with  12 data science leaders from the most innovative companies at Bay Area.
                     </p>
-<!--                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Overview</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Talks</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Workshops</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -151,6 +115,26 @@
 
                     <br>
                     <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="speaker-profile">
+                                <img src="img/ion_stoica.jpg" alt="" class="speaker-picture">
+                            </span>
+                                <h4>
+                                    <strong>Ion Stoica</strong>
+                                </h4>
+                                <p>Founder and CEO at Databricks</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="speaker-profile">
+                                <img class="speaker-picture" src="img/anthony_goldbloom.jpg">
+                                <h4>
+                                    <strong>Anthony Goldbloom</strong>
+                                </h4>
+                                <p>Founder and CEO at Kaggle</p>
+                            </div>
+                        </div>
 
                     	<div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
@@ -173,25 +157,6 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6">
-                            <div class="speaker-profile">
-                                <img class="speaker-picture" src="img/travis_brooks.jpg">
-                                <h4>
-                                    <strong>Travis Brooks</strong>
-                                </h4>
-                                <p>Head of Data Science at Yelp</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="speaker-profile">
-                                <img class="speaker-picture" src="img/anthony_goldbloom.jpg">
-                                <h4>
-                                    <strong>Anthony Goldbloom</strong>
-                                </h4>
-                                <p>Founder and CEO at Kaggle</p>
-                            </div>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -227,12 +192,11 @@
 
                         <div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
-                                <img src="img/aditi_dhagat.jpg" alt="" class="speaker-picture">
-                            </span>
+                                <img class="speaker-picture" src="img/travis_brooks.jpg">
                                 <h4>
-                                    <strong>Aditi Dhagat</strong>
+                                    <strong>Travis Brooks</strong>
                                 </h4>
-                                <p>Senior Director, Big Data and Data Science at Adobe</p>
+                                <p>Head of Data Science at Yelp</p>
                             </div>
                         </div>
                     </div>
@@ -267,16 +231,16 @@
                             </div>
                         </div>
 
-                        <!-- <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6">
                             <div class="speaker-profile">
-                                <img src="img/unknown_speaker.png" alt="" class="speaker-picture">
+                                <img src="img/aditi_dhagat.jpg" alt="" class="speaker-picture">
                             </span>
                                 <h4>
-                                    <strong>Some Guy</strong>
+                                    <strong>Aditi Dhagat</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Senior Director, Big Data and Data Science at Adobe</p>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -442,6 +406,25 @@
 
     <!-- google map -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <script src="js/wow.js"></script>
+    <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+    </script>
 
     <!-- Custom Theme JavaScript -->
     <script>
